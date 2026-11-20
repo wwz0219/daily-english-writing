@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f5f0" />
+    <meta name="description" content="每天寫一小段英文，累積寫作習慣，回到聊天取得細緻批改與個人化學習建議。" />
+    <title>Daily Draft — 每天寫一點英文</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Daily Draft 首頁"><span class="brand-mark">d.</span><span>daily draft</span></a>
+        <div class="streak-pill"><span class="spark">✳</span><span id="streak-count">0</span> day streak</div>
+      </header>
+
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> YOUR DAILY WRITING PRACTICE</p>
+          <h1>A little English,<br /><em>every day.</em></h1>
+          <p class="hero-description">每天寫一點，把英文慢慢變成自己的語言。寫完後回到聊天裡，我會陪你修改、理解錯誤，再找到下一步。</p>
+          <div class="today-label"><span class="today-dot"></span><span id="today-date">TODAY</span><span class="label-divider">/</span> 10 MINUTES IS ENOUGH</div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="sun"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="art-note"><span class="note-kicker">A NOTE TO SELF</span><span class="note-text">Progress<br />over<br /><i>perfect.</i></span><span class="note-doodle">↗</span></div>
+          <span class="art-star star-one">✳</span><span class="art-star star-two">✳</span><span class="art-caption">small steps<br />add up</span>
+        </div>
+      </section>
+
+      <section class="workspace-grid">
+        <article class="writing-card">
+          <div class="card-head"><div><p class="section-kicker">TODAY'S PROMPT</p><h2 id="prompt-title">A small thing that made me smile</h2></div><button id="new-prompt" class="icon-button" title="換一個題目" aria-label="換一個題目">↻</button></div>
+          <p class="prompt-hint" id="prompt-hint">Write about a small moment from this week that lifted your mood. What happened, and why did it stay with you?</p>
+          <label class="sr-only" for="essay">在這裡寫下你的英文短文</label>
+          <textarea id="essay" placeholder="Start with one sentence. You can polish it later…" spellcheck="true"></textarea>
+          <div class="editor-footer"><span id="word-count">0 words</span><span class="autosave"><span class="save-dot"></span> Draft saved on this device</span></div>
+          <div class="card-actions"><button id="clear-draft" class="text-button">Clear draft</button><button id="finish-writing" class="primary-button">Finish today's writing <span>↗</span></button></div>
+        </article>
+
+        <aside class="side-column">
+          <article class="coach-card">
+            <div class="coach-icon">✳</div><p class="section-kicker">YOUR WRITING COACH</p><h2>Ready for a<br />second pair of eyes?</h2>
+            <p>把草稿送回聊天，我會幫你看文法、用字和句子流暢度，並整理最值得練習的地方。</p>
+            <button id="copy-for-chat" class="secondary-button">Copy essay for chat <span>↗</span></button>
+            <div class="coach-note"><span>✦</span> No grades. Just useful next steps.</div>
+          </article>
+          <article class="tip-card"><div class="tip-top"><span class="section-kicker">A GENTLE REMINDER</span><span class="tip-flower">✿</span></div><p>“You don’t have to write something brilliant. You just have to show up.”</p><span class="tip-byline">ONE PAGE AT A TIME</span></article>
+        </aside>
+      </section>
+
+      <section class="bottom-row">
+        <div class="progress-card"><div><p class="section-kicker">YOUR PRACTICE</p><h2>Consistency builds confidence.</h2></div><div class="week" id="week-days"></div></div>
+        <div class="how-card"><p class="section-kicker">THE ROUTINE</p><div class="routine-steps"><span><b>01</b> Write</span><i>→</i><span><b>02</b> Review</span><i>→</i><span><b>03</b> Grow</span></div><p>每天晚上 8 點提醒自己回到這個練習。</p></div>
+      </section>
+      <footer><span>DAILY DRAFT</span><span>Your drafts stay in this browser.</span><a href="https://github.com" target="_blank" rel="noreferrer">Made for steady progress ↗</a></footer>
+    </main>
+    <div id="toast" role="status" aria-live="polite" class="toast"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
