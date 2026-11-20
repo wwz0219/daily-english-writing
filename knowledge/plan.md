@@ -10,7 +10,7 @@
 
 - GitHub repository: https://github.com/wwz0219/daily-english-writing
 - Published website: https://wwz0219.github.io/daily-english-writing/
-- Latest deployment: https://github.com/wwz0219/daily-english-writing/actions/runs/44670372316
+- Workflow history: https://github.com/wwz0219/daily-english-writing/actions/workflows/pages.yml
 
 ### 已完成
 
